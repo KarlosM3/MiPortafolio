@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carlos - Desarrollador Software</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Toggle tema oscuro -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <header>
+        <h1 id="reload-page">Mi Portafolio</h1>
+        <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#about">Sobre mí</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección Hero -->
+    <section id="hero" class="hero-section">
+        <div class="hero-content animate-on-scroll">
+            <h1>Carlos</h1>
+            <p>Desarrollador Software 💻</p>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn btn-primary">Ver Proyectos</a>
+                <a href="Carlos-Muñoz-Martínez-CV.docx.pdf" class="btn btn-secondary" download>Descargar CV</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Sobre mí -->
+    <section id="about" class="animate-on-scroll">
+        <h2>Sobre mí</h2>
+        <div class="about-grid">
+            <div class="about-text">
+                <p>Apasionado por el desarrollo de software y tecnología, recién graduado en Ingeniería Informática. He diseñado y desarrollado una aplicación web de fantasy football gestionando tanto el frontend como el backend con Angular, Node.js y MongoDB.</p>
+                <p>Destaco por mi aprendizaje rápido, resiliencia y capacidad de resolución de problemas. Actualmente busco aportar valor en equipos innovadores y seguir creciendo profesionalmente en IT.</p>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="counter" data-target="5">0</span>
+                        <p>Tecnologías</p>
+                    </div>
+                    <div class="stat-item">
+                        <span class="counter" data-target="1">0</span>
+                        <p>Proyecto Principal</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nueva sección de habilidades -->
+    <section id="skills" class="animate-on-scroll">
+        <h2>Habilidades Técnicas</h2>
+        <div class="skills-grid">
+            <article class="skill-category">
+                <h3>Frontend</h3>
+                <ul class="skill-items">
+                    <li class="skill-item">
+                        <i class="fab fa-angular"></i>
+                        <span>Angular</span>
+                    </li>
+                    <li class="skill-item">
+                        <i class="fab fa-js-square"></i>
+                        <span>JavaScript</span>
+                    </li>
+                </ul>
+            </article>
+            
+            <article class="skill-category">
+                <h3>Backend</h3>
+                <ul class="skill-items">
+                    <li class="skill-item">
+                        <i class="fab fa-node-js"></i>
+                        <span>Node.js</span>
+                    </li>
+                    <li class="skill-item">
+                        <i class="fas fa-database"></i>
+                        <span>MongoDB</span>
+                    </li>
+                </ul>
+            </article>
+        </div>
+    </section>
+
+    <!-- Sección Proyectos mejorada -->
+    <section id="projects" class="animate-on-scroll">
+        <h2>Proyectos</h2>
+        <div class="project-filters">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="web">Web Apps</button>
+            <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+        </div>
+        
+        <div class="projects-grid">
+            <article class="project-card web fullstack"> 
+                <div class="project-image">
+                    <img src="images/market-preview.jpg" alt="Fantasy Football Preview" loading="lazy">
+                </div>
+                
+                <main class="project-content">
+                    <h3>Fantasy Fútbol</h3>
+                    <p>Aplicación web de fantasy fútbol de la primera liga española con gestión completa de equipos y estadísticas.</p>
+                    
+                    <ul class="tech-stack">
+                        <li class="tech-tag">Angular</li>
+                        <li class="tech-tag">Node.js</li>
+                        <li class="tech-tag">MongoDB</li>
+                    </ul>
+                    
+                    <nav class="project-links">
+                        <a href="https://domonios-fantasy-git-main-karlosm3s-project-domonios-fantasy.vercel.app/" target="_blank" class="btn">Ver Demo</a>
+                        <a href="https://github.com/KarlosM3/fantasyManagerTFG" target="_blank" class="btn">Ver en GitHub</a>
+                    </nav>
+                </main>
+            </article>
+        </div>
+    </section>
+
+
+    <!-- Sección Contacto -->
+    <section id="contact" class="animate-on-scroll">
+        <h2>Contacto</h2>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h3>¡Trabajemos juntos!</h3>
+                <p>Estoy buscando oportunidades como desarrollador full stack. ¿Tienes un proyecto en mente?</p>
+                <div class="contact-links">
+                    <a href="mailto:carlos@ejemplo.com" class="contact-link">
+                        <i class="fas fa-envelope"></i>
+                        carlos@ejemplo.com
+                    </a>
+                    <a href="https://linkedin.com/in/carlos" class="contact-link">
+                        <i class="fab fa-linkedin"></i>
+                        LinkedIn
+                    </a>
+                </div>
+            </div>
+            <form class="contact-form">
+                <div class="form-group">
+                    <input type="text" placeholder="Nombre" required>
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Email" required>
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Mensaje" required></textarea>
+                    <span class="error-message"></span>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                    <span class="btn-text">Enviar Mensaje</span>
+                    <span class="btn-loading">Enviando...</span>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
