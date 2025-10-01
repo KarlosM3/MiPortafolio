@@ -6,6 +6,7 @@
     --primary-color: #ffa200;
     --secondary-color: #222;
     --shadow: 0 2px 24px rgba(0,0,0,0.06);
+    --border-color: #e5e7eb;
 }
 
 [data-theme="dark"] {
@@ -13,6 +14,7 @@
     --text-color: #e0e0e0;
     --card-bg: #2d2d2d;
     --shadow: 0 2px 24px rgba(255,255,255,0.1);
+    --border-color: #374151;
 }
 
 * {
@@ -196,6 +198,88 @@ section {
     margin-right: auto;
 }
 
+#about h2{
+    padding-bottom: 20px;
+}
+
+/* Grid de estudios y experiencia */
+#experience {
+    padding: 4rem 0;
+    background: var(--bg-color);
+}
+
+#experience h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+/* Lista de experiencias */
+.experience-list {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Item individual */
+.experience-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.experience-item:last-child {
+    border-bottom: none;
+}
+
+.experience-item:hover {
+    transform: translateX(10px);
+    background: rgba(var(--primary-color-rgb), 0.02);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 8px;
+    margin: 0 -1rem;
+}
+
+/* Icono de la experiencia */
+.experience-icon {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+}
+
+/* Contenido de la experiencia */
+.experience-content {
+    flex: 1;
+}
+
+.experience-content h3 {
+    color: var(--text-primary);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+.experience-role {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+
+
+
 /* Grid de habilidades */
 .skills-grid {
     display: grid;
@@ -297,8 +381,6 @@ section {
 
 .tech-tag {
     display:flex;
-    background: var(--primary-color);
-    color: white;
     padding: 4px 12px;
     border-radius: 15px;
     font-size: 0.8em;
@@ -471,6 +553,35 @@ section {
 
     .hero-content h1 {
         font-size: 2.5em;
+    }
+
+    .experience-list {
+        padding: 0 1rem;
+    }
+    
+    .experience-item {
+        gap: 1rem;
+    }
+    
+    .experience-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    .experience-content h3 {
+        font-size: 1.1rem;
+    }
+    
+    .experience-role {
+        font-size: 0.9rem;
+    }
+    
+    .experience-item:hover {
+        transform: none;
+        padding-left: 0;
+        padding-right: 0;
+        margin: 0;
     }
     
     .cta-buttons {
