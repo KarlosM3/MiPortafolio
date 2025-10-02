@@ -38,6 +38,22 @@ window.addEventListener('resize', function() {
     }
 });
 
+// Cargar SVGs con currentColor
+document.addEventListener('DOMContentLoaded', function() {
+    const iconWrappers = document.querySelectorAll('[data-icon]');
+    
+    iconWrappers.forEach(async (wrapper) => {
+        const iconName = wrapper.dataset.icon;
+        try {
+            const response = await fetch(`assets/icons/${iconName}.svg`);
+            const svgText = await response.text();
+            wrapper.innerHTML = svgText;
+        } catch (error) {
+            console.error(`Error loading icon: ${iconName}`, error);
+        }
+    });
+});
+
 // NUEVAS FUNCIONALIDADES
 
 // 1. Modo oscuro
