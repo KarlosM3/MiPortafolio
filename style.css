@@ -392,10 +392,16 @@ section {
 }
 
 .tech-tag {
-    display:flex;
-    padding: 4px 12px;
-    border-radius: 15px;
-    font-size: 0.8em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    border-radius: 25px;
+}
+
+.tech-tag i {
+    font-size: 1.5em;
+    color: var(--primary-color);
 }
 
 /* Estadísticas animadas */
@@ -493,6 +499,73 @@ section {
 .btn.loading .btn-loading {
     display: block;
 }
+
+.footer {
+    background: var(--secondary-color);
+    border-top: 1px solid var(--border-color);
+    padding: 3rem 2rem 2rem;
+    margin-top: 4rem;
+    box-shadow: var(--shadow);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 14rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-items: center;
+}
+
+
+
+/* Estilos para las listas */
+.list-contact,
+.list-shortcut,
+.list-follow {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list-contact li,
+.list-shortcut li,
+.list-follow li {
+    margin-bottom: 0.75rem;
+}
+
+.list-contact a,
+.list-shortcut a,
+.list-follow a {
+    color:grey;
+    text-decoration: none;
+    font-weight: 400;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.list-contact a:hover,
+.list-shortcut a:hover,
+.list-follow a:hover {
+    color: var(--primary-color);
+    transform: translateX(5px);
+}
+
+/* Títulos de secciones */
+.footer-contact::before,
+.footer-shortcut::before,
+.footer-follow::before {
+    content: '';
+    display: block;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color:#fff;
+    font-size: 1.1rem;
+}
+
+.footer-contact::before { content: 'Contacto'; }
+.footer-shortcut::before { content: 'Enlaces Rápidos'; }
+.footer-follow::before { content: 'Sígueme'; }
 
 /* Responsive mejorado */
 @media (max-width: 768px) {
